@@ -133,10 +133,10 @@ if submitted:
 
         if churn_prob > 0.5:
             st.error(f"🚨 **HIGH RISK**: This customer is likely to churn. The probability is {churn_prob*100:.1f}%.")
-            st.balloons()
+            
         else:
             st.success(f"✅ **LOW RISK**: This customer is likely to stay. The probability of churn is {churn_prob*100:.1f}%.")
-            
+            st.balloons()
         st.markdown(f"***Model's Raw Prediction:*** *The probability of class 'Yes' (Churn) is `{churn_prob:.4f}`.*")
 
     except Exception as e:
